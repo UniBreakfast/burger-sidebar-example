@@ -1,3 +1,6 @@
-# A mess for system to emerge
+# An example of burger sidebar menu
 
-One project to put everything I want to do into it for some time. The longer the better. The goal is to create a mess and to force myself to develop some sort of system/methodology to work with. I'm not sure if I'll be able to do it too long, but I'm trying. Previous sentence was added by the GitHub Copilot. You're welcome. That one too.
+Requirements were for it to be done without breakpoints and to be on screen at any resolution.
+
+![image](https://user-images.githubusercontent.com/19654456/176397552-a9bb0c83-d65f-4bc1-9d17-6fe03a6e0f6d.png)
+
