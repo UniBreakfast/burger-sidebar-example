@@ -15,6 +15,7 @@ button {
   background: none;
   appearance: none;
   border: none;
+  padding: none;
 }
 
 button:not(.clean) {
