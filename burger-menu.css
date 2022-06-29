@@ -6,7 +6,7 @@
   width: var(--finger-width);
   height: calc(var(--finger-width) * 0.8);
   background-color: black;
-  transition: 500ms;
+  transition: 500ms, width, height;
 }
 
 :checked+.burger-btn {

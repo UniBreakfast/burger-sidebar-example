@@ -6,6 +6,10 @@ body {
   max-height: 100vh;
 }
 
+header {
+  margin-right: calc(2 * var(--finger-width));
+}
+
 main {
   max-height: 80vh;
   overflow: auto;
