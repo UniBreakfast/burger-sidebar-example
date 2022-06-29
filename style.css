@@ -1,0 +1,22 @@
+p {
+  margin: 40px;
+}
+
+body {
+  max-height: 100vh;
+}
+
+main {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: var(--finger-width);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: calc(0.4 * var(--finger-width)) solid var(--background-color);
+  border-radius: var(--finger-width);
+}

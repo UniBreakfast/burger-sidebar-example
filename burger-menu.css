@@ -1,0 +1,104 @@
+.burger-btn {
+  position: fixed;
+  z-index: 1;
+  top: var(--finger-width);
+  right: var(--finger-width);
+  width: var(--finger-width);
+  height: calc(var(--finger-width) * 0.8);
+  background-color: black;
+  transition: 500ms;
+}
+
+:checked+.burger-btn {
+  border-radius: calc(var(--finger-width) * 0.1);
+  transform: scale(0.8) scaleX(0.9);
+}
+
+.burger-btn>label::before, 
+.burger-btn>label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background-color: var(--background-color);
+  transition: 500ms;
+}
+
+.burger-btn>label::before {
+  top: 20%;
+}
+
+.burger-btn>label::after {
+  top: 60%;
+}
+
+:checked+.burger-btn>label::before, 
+:checked+.burger-btn>label::after {
+  top: 40%;
+  border-radius: calc(0.1 * var(--finger-width));
+}
+
+:checked+.burger-btn>label::before {
+  transform: scaleY(0.9) rotate(0.625turn);
+}
+
+:checked+.burger-btn>label::after {
+  transform: scaleY(0.9) rotate(0.875turn);
+}
+
+.burger-menu [for="menu-toggle"] {
+  inset: 0;
+  position: absolute;
+}
+
+.burger-menu>.menu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms;
+}
+
+.burger-menu>#menu-toggle:not(:checked)~.menu {
+  pointer-events: none;
+}
+
+.burger-menu>:checked~.menu {
+  background-color: var(--shade);
+}
+
+.burger-menu .container {
+  padding: var(--finger-width);
+  padding-top: calc(3 * var(--finger-width));
+  padding-right: calc(0.3 * var(--finger-width));
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(100%, 500px);
+  transition: 500ms;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+}
+
+.burger-menu .wrapper {
+  overflow: auto;
+  height: calc(100vh - 4 * var(--finger-width));
+}
+
+.burger-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--finger-width);
+  padding-right: calc(0.1 * var(--finger-width));
+}
+
+.burger-menu>#menu-toggle:not(:checked)~.menu>.container {
+  right: max(-100%, -500px);
+}
